@@ -5,8 +5,8 @@ using UnityEngine.Serialization;
 
 public class UIButtonScript : MonoBehaviour,IPointerEnterHandler
 {
-    public GameObject uiButton;
-    public GameObject pauseText;
+    [SerializeField] private GameObject uiButton;
+    [SerializeField] private GameObject pauseText;
     
     private AudioManager sound;
     private bool isPaused = false;

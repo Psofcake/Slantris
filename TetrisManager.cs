@@ -31,12 +31,12 @@ public class TetrisManager : MonoBehaviour
 {
     private AudioManager sound;
     
-    public GameObject[] blockPrefabs;
-    public Transform gameBoard;
-    public GameObject nextBoard;
-    public GameObject scoreBoard;
-    public float fallTime = 1.8f;
-    public GameObject GameOver;
+    [SerializeField] private GameObject[] blockPrefabs;
+    [SerializeField] private Transform gameBoard;
+    [SerializeField] private GameObject nextBoard;
+    [SerializeField] private GameObject scoreBoard;
+    [SerializeField] private float fallTime = 1.8f;
+    [SerializeField] private GameObject GameOver;
 
     private int boardWidth = 13;
     private int boardHeight = 13;
@@ -71,7 +71,7 @@ public class TetrisManager : MonoBehaviour
             Debug.Log("Record Not Exist");
         }
 
-        //싱글톤 오디오매니저 인스턴스 생성
+        //싱글톤 오디오매니저 인스턴스 가져오기
         sound = AudioManager.Instance;    
     }
 
